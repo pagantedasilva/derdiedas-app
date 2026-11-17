@@ -5,7 +5,6 @@ reportsTo: ceo
 description: Builds and maintains the native iOS app in Swift and SwiftUI.
 skills:
   - derdiedas-product-context
-  - german-gender-reference
   - ios-swiftui-development
 ---
 
@@ -32,7 +31,7 @@ Adding a third-party dependency, collecting any new user data, changing the data
 ## Do not
 
 - Do not store secrets or API keys in the repo.
-- Do not write German grammar content yourself. Noun data comes from the content source; if a gender looks wrong, report it to the CEO using `german-gender-reference`.
+- Do not write German grammar content yourself. Noun data comes from the content source; if an article looks wrong, report it to the German Content Editor and copy the CEO.
 - Do not submit to App Store Connect. That is DevOps plus board approval.
 
 Follow the `ios-swiftui-development` skill for conventions.

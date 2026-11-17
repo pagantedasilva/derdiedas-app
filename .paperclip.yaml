@@ -1,6 +1,11 @@
 schema: paperclip/v1
-# Adapter overrides. Change `type` / `model` to whatever runtime you actually use.
+# Model tiers, to control token cost. Edit `type` and `model` for the runtime you actually use.
 # Valid types: claude_local, codex_local, opencode_local, pi_local, cursor, gemini_local, openclaw_gateway
+#
+# Strong tier (mistakes are expensive): ceo, ios-developer, android-developer, german-content-editor
+# Standard tier (judgment and writing):  ux-designer, ux-copy-expert
+# Economy tier (routine work, drafts):   devops-engineer, qa-tester, marketing-manager, support-specialist
+# Verify the economy model ID is accepted by your adapter before importing.
 agents:
   ceo:
     adapter:
@@ -17,22 +22,7 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-4-6
-  devops-engineer:
-    adapter:
-      type: claude_local
-      config:
-        model: claude-sonnet-4-6
-    inputs:
-      env:
-        GH_TOKEN:
-          kind: secret
-          requirement: optional
   german-content-editor:
-    adapter:
-      type: claude_local
-      config:
-        model: claude-sonnet-4-6
-  qa-tester:
     adapter:
       type: claude_local
       config:
@@ -47,13 +37,28 @@ agents:
       type: claude_local
       config:
         model: claude-sonnet-4-6
+  devops-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-haiku-5-5
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+  qa-tester:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-haiku-5-5
   marketing-manager:
     adapter:
       type: claude_local
       config:
-        model: claude-sonnet-4-6
+        model: claude-haiku-5-5
   support-specialist:
     adapter:
       type: claude_local
       config:
-        model: claude-sonnet-4-6
+        model: claude-haiku-5-5

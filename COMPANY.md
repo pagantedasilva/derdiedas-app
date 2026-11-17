@@ -45,5 +45,21 @@ CEO
 
 ## Skills
 
-Shared by everyone: `derdiedas-product-context`, `german-gender-reference`.
+Shared by everyone: `derdiedas-product-context`.
+`german-gender-reference` is attached only to the agents who write or check German: CEO, UX Designer, UX Copy Expert, German Content Editor, QA Tester, Marketing Manager, Support Specialist. The developers do not load it.
 Role skills are listed in each agent's `AGENTS.md`.
+
+## Cost discipline (applies to every agent)
+
+Tokens cost money. Work lean:
+
+1. **Do nothing when there is nothing to do.** If you have no assigned task, no unanswered comment, and nothing blocked, end the run immediately with no output.
+2. **Read only what the task needs.** Open the files and docs the task names. Do not explore the whole repository or re-read files you have already seen in this run.
+3. **One task, one outcome.** Do the task as written. If you find extra work, create a separate task instead of doing it.
+4. **Keep writing short.** Closing comments are at most five lines: what changed, how it was checked, what is left. Do not repeat the task description or paste long files into comments.
+5. **Hand off in tasks, not threads.** Do not discuss in long comment chains. Ask one clear question; the CEO decides in one paragraph.
+6. **Run the smallest check that proves it.** Run the tests for the changed code, not the whole suite, until the final check before closing.
+7. **Batch low-urgency work.** Marketing and Support work in weekly batches unless the CEO marks something urgent.
+8. **Stay inside your budget.** If you expect a task to cost more than your remaining budget, stop and tell the CEO before starting.
+
+The CEO enables agents in stages: start with CEO, UX Designer, UX Copy Expert, German Content Editor and one developer; add QA, DevOps, Marketing and Support when there is a build, a beta, or a store listing for them to work on.
