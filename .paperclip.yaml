@@ -1,0 +1,59 @@
+schema: paperclip/v1
+# Adapter overrides. Change `type` / `model` to whatever runtime you actually use.
+# Valid types: claude_local, codex_local, opencode_local, pi_local, cursor, gemini_local, openclaw_gateway
+agents:
+  ceo:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  ios-developer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  android-developer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  devops-engineer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+    inputs:
+      env:
+        GH_TOKEN:
+          kind: secret
+          requirement: optional
+  german-content-editor:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  qa-tester:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  ux-designer:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  ux-copy-expert:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  marketing-manager:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
+  support-specialist:
+    adapter:
+      type: claude_local
+      config:
+        model: claude-sonnet-4-6
